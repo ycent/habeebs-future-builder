@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 
+const parentCompany = {
+  title: "Centz Group",
+  subtitle: "Parent Company",
+  description: "The umbrella company for EventNav and future ventures in SaaS, real estate, agriculture, and technology.",
+};
+
 const ventures = [
   {
     title: "EventNav",
@@ -21,12 +27,6 @@ const ventures = [
     link: "#",
   },
   {
-    title: "Centz Group",
-    subtitle: "Parent Company",
-    description: "The umbrella company for EventNav and future ventures in SaaS, real estate, agriculture, and technology.",
-    link: "#",
-  },
-  {
     title: "GDG Babcock",
     subtitle: "Community Leadership",
     description: "A developer community where I help connect talent, foster innovation, and create opportunities.",
@@ -37,6 +37,12 @@ const ventures = [
     subtitle: "In Development",
     description: "An upcoming project currently in the building phase, focused on innovation and impact.",
     link: "#",
+  },
+  {
+    title: "Habeeb Advisory",
+    subtitle: "Consulting & Strategy",
+    description: "Advisory and strategy services for startups and businesses. Focused on technology, innovation, and helping companies grow.",
+    link: "https://habeebadvisory.com",
   },
 ];
 
@@ -49,31 +55,56 @@ const Ventures = () => {
             What I'm Building
           </h2>
           
+          {/* Parent Company - Centz Group */}
+          <Card className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20 shadow-hover animate-scale-in">
+            <div className="text-center space-y-4">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary">
+                  {parentCompany.title}
+                </h3>
+                <p className="text-sm font-semibold text-primary/70 uppercase tracking-wider mt-2">
+                  {parentCompany.subtitle}
+                </p>
+              </div>
+              <p className="text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+                {parentCompany.description}
+              </p>
+            </div>
+          </Card>
+
+          {/* Ventures Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ventures.map((venture, index) => (
-              <Card 
-                key={index} 
-                className="p-6 gradient-card shadow-soft hover:shadow-hover transition-smooth group cursor-pointer animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+              <a
+                key={index}
+                href={venture.link}
+                target={venture.link.startsWith('http') ? '_blank' : '_self'}
+                rel={venture.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="block"
               >
-                <div className="space-y-4">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold group-hover:text-primary transition-smooth">
-                        {venture.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground font-medium">
-                        {venture.subtitle}
-                      </p>
+                <Card 
+                  className="p-6 h-full gradient-card shadow-soft hover:shadow-hover transition-smooth group cursor-pointer animate-scale-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h3 className="text-xl font-semibold group-hover:text-primary transition-smooth">
+                          {venture.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground font-medium">
+                          {venture.subtitle}
+                        </p>
+                      </div>
+                      <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-smooth" />
                     </div>
-                    <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-smooth" />
+                    
+                    <p className="text-muted-foreground leading-relaxed">
+                      {venture.description}
+                    </p>
                   </div>
-                  
-                  <p className="text-muted-foreground leading-relaxed">
-                    {venture.description}
-                  </p>
-                </div>
-              </Card>
+                </Card>
+              </a>
             ))}
           </div>
         </div>
