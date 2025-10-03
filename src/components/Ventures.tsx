@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import eventnavLogo from "@/assets/eventnav-logo.png";
 
 const parentCompany = {
   title: "Centz Group",
@@ -12,7 +13,8 @@ const ventures = [
     title: "EventNav",
     subtitle: "SaaS Company",
     description: "A software company building digital platforms for events, culture, and communities.",
-    link: "#",
+    link: "https://eventnavltd.com",
+    logo: eventnavLogo,
   },
   {
     title: "Nexspot",
@@ -87,6 +89,15 @@ const Ventures = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="space-y-4">
+                    {venture.logo && (
+                      <div className="h-12 flex items-center">
+                        <img 
+                          src={venture.logo} 
+                          alt={`${venture.title} logo`}
+                          className="h-full w-auto object-contain"
+                        />
+                      </div>
+                    )}
                     <div className="flex items-start justify-between">
                       <div>
                         <h3 className="text-xl font-semibold group-hover:text-primary transition-smooth">
