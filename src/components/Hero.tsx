@@ -34,7 +34,7 @@ const Hero = () => {
               asChild
             >
               <a 
-                href="https://linkedin.com/in/habeeb" 
+                href="https://www.linkedin.com/in/habeeb-muhammed-44715a309" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
