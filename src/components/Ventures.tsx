@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 import eventnavLogo from "@/assets/eventnav-logo.png";
+import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
 
 const parentCompany = {
   title: "Centz Group",
@@ -32,7 +33,8 @@ const ventures = [
     title: "GDG Babcock",
     subtitle: "Community Leadership",
     description: "A developer community where I help connect talent, foster innovation, and create opportunities.",
-    link: "#",
+    link: "https://gdgbabcock.com",
+    logo: gdgBabcockLogo,
   },
   {
     title: "H3 Initiative",
