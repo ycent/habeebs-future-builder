@@ -21,7 +21,7 @@ const ventures = [
     title: "Nexspot",
     subtitle: "Product",
     description: "Discover hangouts, nightlife, and experiences across Africa.",
-    link: "#",
+    link: "https://nexspot.com.ng",
   },
   {
     title: "Threadbase",
@@ -40,7 +40,7 @@ const ventures = [
     title: "H3 Initiative",
     subtitle: "In Development",
     description: "An upcoming project currently in the building phase, focused on innovation and impact.",
-    link: "#",
+    link: "https://h3initiative.org",
   },
   {
     title: "Habeeb Advisory",

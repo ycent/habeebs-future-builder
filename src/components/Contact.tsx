@@ -9,7 +9,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com/in/habeeb",
+    url: "https://www.linkedin.com/in/habeeb-muhammed-44715a309",
     color: "hover:text-[#0077B5]",
   },
   {
