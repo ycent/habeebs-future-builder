@@ -60,7 +60,7 @@ const Ventures = () => {
           </h2>
           
           {/* Parent Company - Centz Group */}
-          <Card className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20 shadow-hover animate-scale-in">
+          <Card variant="gradient" className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20 animate-scale-in">
             <div className="text-center space-y-4">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-primary">
@@ -87,7 +87,8 @@ const Ventures = () => {
                 className="block"
               >
                 <Card 
-                  className="p-6 h-full gradient-card shadow-soft hover:shadow-hover transition-smooth group cursor-pointer animate-scale-in"
+                  variant="elevated"
+                  className="p-6 h-full group cursor-pointer animate-scale-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="space-y-4">
