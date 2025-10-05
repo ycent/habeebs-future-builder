@@ -55,22 +55,29 @@ const Ventures = () => {
     <section id="ventures" className="py-24 px-4 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="space-y-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-center">
-            What I'm Building
-          </h2>
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight">
+              What I'm Building
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              From innovative software to transformative ventures
+            </p>
+          </div>
           
           {/* Parent Company - Centz Group */}
-          <Card variant="gradient" className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20 animate-scale-in">
-            <div className="text-center space-y-4">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-primary">
-                  {parentCompany.title}
-                </h3>
-                <p className="text-sm font-semibold text-primary/70 uppercase tracking-wider mt-2">
+          <Card variant="gradient" className="p-10 md:p-12 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20 animate-scale-in overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+            <div className="relative text-center space-y-6">
+              <div className="inline-block">
+                <span className="text-xs font-semibold text-primary/70 uppercase tracking-widest px-4 py-1.5 bg-primary/10 rounded-full border border-primary/20">
                   {parentCompany.subtitle}
-                </p>
+                </span>
               </div>
-              <p className="text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-primary tracking-tight">
+                {parentCompany.title}
+              </h3>
+              <p className="text-foreground/80 text-lg leading-relaxed max-w-3xl mx-auto">
                 {parentCompany.description}
               </p>
             </div>
@@ -88,32 +95,35 @@ const Ventures = () => {
               >
                 <Card 
                   variant="elevated"
-                  className="p-6 h-full group cursor-pointer animate-scale-in"
+                  className="p-8 h-full group cursor-pointer animate-scale-in relative overflow-hidden"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="space-y-4">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative space-y-5">
                     {venture.logo && (
-                      <div className="h-12 flex items-center">
+                      <div className="h-14 flex items-center">
                         <img 
                           src={venture.logo} 
                           alt={`${venture.title} logo`}
-                          className="h-full w-auto object-contain"
+                          className="h-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                         />
                       </div>
                     )}
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <h3 className="text-xl font-semibold group-hover:text-primary transition-smooth">
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-smooth leading-tight">
                           {venture.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground font-medium">
-                          {venture.subtitle}
-                        </p>
+                        <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-smooth flex-shrink-0 mt-1" />
                       </div>
-                      <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-smooth" />
+                      <span className="inline-block text-xs font-semibold text-muted-foreground uppercase tracking-wider px-3 py-1 bg-muted rounded-full">
+                        {venture.subtitle}
+                      </span>
                     </div>
                     
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-[15px]">
                       {venture.description}
                     </p>
                   </div>
