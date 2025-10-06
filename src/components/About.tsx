@@ -9,7 +9,7 @@ const About = () => {
           
           <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
             <p className="text-lg md:text-xl">
-              I'm Habeeb — a Computer Science student, entrepreneur, and project manager passionate about technology, innovation, and building Africa's biggest multinational conglomerate.
+              I'm Habeeb, a computer scientist, entrepreneur, and project manager passionate about technology, innovation, and building Africa's biggest multinational conglomerate.
             </p>
             
             <p className="text-lg md:text-xl mt-6">
@@ -17,7 +17,7 @@ const About = () => {
             </p>
             
             <p className="text-lg md:text-xl mt-6">
-              I also lead <span className="font-semibold text-foreground">GDG Babcock</span>, connecting developers and fostering innovation, and I'm building the <span className="font-semibold text-foreground">H3 Initiative</span>, an upcoming project focused on impact and growth.
+              I also lead <span className="font-semibold text-foreground">GDG Babcock</span> and <span className="font-semibold text-foreground">New-Horizon Tech Hub</span>, connecting developers and fostering innovation, and I'm building the <span className="font-semibold text-foreground">H3</span>, an upcoming initiative focused on impact and growth.
             </p>
           </div>
         </div>
