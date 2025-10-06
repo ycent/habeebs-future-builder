@@ -17,7 +17,7 @@ const Vision = () => {
             </p>
             
             <p>
-              Africa has the creativity, the talent, and the drive — I want to build the companies that unlock it.
+              Africa has the creativity, the talent, and the drive, I will build the companies that unlock it.
             </p>
           </div>
           

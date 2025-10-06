@@ -15,7 +15,7 @@ const socialLinks = [
   {
     name: "Twitter",
     icon: Twitter,
-    url: "https://twitter.com/habeeb",
+    url: "https://twitter.com/ycent003",
     color: "hover:text-[#1DA1F2]",
   },
   {
