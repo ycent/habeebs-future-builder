@@ -21,7 +21,7 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com/habeeb",
+    url: "https://github.com/ycent",
     color: "hover:text-foreground",
   },
   {
