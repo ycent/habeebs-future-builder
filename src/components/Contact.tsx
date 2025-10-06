@@ -27,7 +27,7 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    url: "https://instagram.com/habeeb",
+    url: "https://instagram.com/centz.jpg",
     color: "hover:text-[#E4405F]",
   },
 ];
