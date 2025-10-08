@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 import eventnavLogo from "@/assets/eventnav-logo.png";
 import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
+import h3Logo from "@/assets/h3-logo.png";
 
 const parentCompany = {
   title: "Centz Group",
@@ -37,10 +38,11 @@ const ventures = [
     logo: gdgBabcockLogo,
   },
   {
-    title: "H3 Initiative",
+    title: "H³ Initiative",
     subtitle: "In Development",
     description: "An upcoming project currently in the building phase, focused on innovation and impact.",
     link: "https://h3initiative.org",
+    logo: h3Logo,
   },
   {
     title: "Habeeb Advisory",
