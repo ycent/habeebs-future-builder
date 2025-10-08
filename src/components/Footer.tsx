@@ -1,4 +1,4 @@
-import hLogo from "@/assets/h-logo.jpg";
+import h3Logo from "@/assets/h3-logo.png";
 
 const Footer = () => {
   return (
@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <img src={hLogo} alt="H Logo" className="h-12 w-12 rounded-lg shadow-soft object-cover" />
+            <img src={h3Logo} alt="H³ Initiative Logo" className="h-12 w-12 object-contain" />
             <div>
               <p className="text-sm text-muted-foreground">
-                © 2025 Habeeb. All rights reserved.
+                © 2025 H³. All rights reserved.
               </p>
             </div>
           </div>
