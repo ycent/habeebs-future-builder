@@ -19,15 +19,9 @@ const ventures = [
     logo: eventnavLogo,
   },
   {
-    title: "Nexspot",
-    subtitle: "Product",
-    description: "Discover hangouts, nightlife, and experiences across Africa.",
-    link: "https://nexspot.com.ng",
-  },
-  {
-    title: "Threadbase",
-    subtitle: "Product",
-    description: "Tools that help tailors manage clients, track jobs, and learn new skills.",
+    title: "Babcock New Horizon Techub",
+    subtitle: "Innovation Hub",
+    description: "A technology and innovation hub fostering entrepreneurship and digital skills development.",
     link: "#",
   },
   {
