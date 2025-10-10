@@ -4,11 +4,6 @@ import eventnavLogo from "@/assets/eventnav-logo.png";
 import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
 import h3Logo from "@/assets/h3-logo.png";
 
-const parentCompany = {
-  title: "Centz Group",
-  subtitle: "Parent Company",
-  description: "The umbrella company for EventNav and future ventures in SaaS, real estate, agriculture, and technology.",
-};
 
 const ventures = [
   {
@@ -60,24 +55,6 @@ const Ventures = () => {
             </p>
           </div>
           
-          {/* Parent Company - Centz Group */}
-          <Card variant="gradient" className="p-10 md:p-12 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20 animate-scale-in overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
-            <div className="relative text-center space-y-6">
-              <div className="inline-block">
-                <span className="text-xs font-semibold text-primary/70 uppercase tracking-widest px-4 py-1.5 bg-primary/10 rounded-full border border-primary/20">
-                  {parentCompany.subtitle}
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-primary tracking-tight">
-                {parentCompany.title}
-              </h3>
-              <p className="text-foreground/80 text-lg leading-relaxed max-w-3xl mx-auto">
-                {parentCompany.description}
-              </p>
-            </div>
-          </Card>
 
           {/* Ventures Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
