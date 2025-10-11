@@ -10,6 +10,8 @@ import {
 import eventnavLogo from "@/assets/eventnav-logo.png";
 import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
 import h3Logo from "@/assets/h3-logo.png";
+import techhubLogo from "@/assets/techhub-logo.png";
+import habeebAdvisoryLogo from "@/assets/consulting-logo.png";
 
 
 const ventures = [
@@ -25,6 +27,7 @@ const ventures = [
     subtitle: "Innovation Hub",
     description: "A technology and innovation hub fostering entrepreneurship and digital skills development.",
     link: "#",
+    logo: techhubLogo,
   },
   {
     title: "GDG Babcock",
@@ -34,17 +37,18 @@ const ventures = [
     logo: gdgBabcockLogo,
   },
   {
-    title: "H³ Initiative",
+    title: "H3 Initiative",
     subtitle: "In Development",
     description: "An upcoming project currently in the building phase, focused on innovation and impact.",
     link: "https://h3initiative.org",
     logo: h3Logo,
   },
   {
-    title: "Habeeb Advisory",
+    title: "Habeeb Consulting",
     subtitle: "Consulting & Strategy",
     description: "Advisory and strategy services for startups and businesses. Focused on technology, innovation, and helping companies grow.",
     link: "https://habeebadvisory.com",
+    logo: habeebAdvisoryLogo,
   },
 ];
 
