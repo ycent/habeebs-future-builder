@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Linkedin, Twitter, Github, Instagram, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const socialLinks = [
   {
@@ -57,28 +58,25 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://thehabeeb.me/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
           name: formData.name.trim(),
           email: formData.email.trim(),
           message: formData.message.trim(),
-          timestamp: new Date().toISOString(),
-        }),
+        },
       });
 
-      if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        throw new Error('Failed to send message');
+      if (error) {
+        throw error;
       }
+
+      console.log('Email sent successfully:', data);
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
