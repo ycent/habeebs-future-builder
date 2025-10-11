@@ -1,5 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import eventnavLogo from "@/assets/eventnav-logo.png";
 import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
 import h3Logo from "@/assets/h3-logo.png";
@@ -56,54 +63,64 @@ const Ventures = () => {
           </div>
           
 
-          {/* Ventures Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ventures.map((venture, index) => (
-              <a
-                key={index}
-                href={venture.link}
-                target={venture.link.startsWith('http') ? '_blank' : '_self'}
-                rel={venture.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="block"
-              >
-                <Card 
-                  variant="elevated"
-                  className="p-8 h-full group cursor-pointer animate-scale-in relative overflow-hidden"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <div className="relative space-y-5">
-                    {venture.logo && (
-                      <div className="h-14 flex items-center">
-                        <img 
-                          src={venture.logo} 
-                          alt={`${venture.title} logo`}
-                          className="h-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
-                        />
+          {/* Ventures Carousel */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              {ventures.map((venture, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <a
+                    href={venture.link}
+                    target={venture.link.startsWith('http') ? '_blank' : '_self'}
+                    rel={venture.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="block h-full"
+                  >
+                    <Card 
+                      variant="elevated"
+                      className="p-8 h-full group cursor-pointer relative overflow-hidden"
+                    >
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="relative space-y-5">
+                        {venture.logo && (
+                          <div className="h-14 flex items-center">
+                            <img 
+                              src={venture.logo} 
+                              alt={`${venture.title} logo`}
+                              className="h-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                            />
+                          </div>
+                        )}
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-start justify-between gap-2">
+                            <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-smooth leading-tight">
+                              {venture.title}
+                            </h3>
+                            <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-smooth flex-shrink-0 mt-1" />
+                          </div>
+                          <span className="inline-block text-xs font-semibold text-muted-foreground uppercase tracking-wider px-3 py-1 bg-muted rounded-full">
+                            {venture.subtitle}
+                          </span>
+                        </div>
+                        
+                        <p className="text-muted-foreground leading-relaxed text-[15px]">
+                          {venture.description}
+                        </p>
                       </div>
-                    )}
-                    
-                    <div className="space-y-2">
-                      <div className="flex items-start justify-between gap-2">
-                        <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-smooth leading-tight">
-                          {venture.title}
-                        </h3>
-                        <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-smooth flex-shrink-0 mt-1" />
-                      </div>
-                      <span className="inline-block text-xs font-semibold text-muted-foreground uppercase tracking-wider px-3 py-1 bg-muted rounded-full">
-                        {venture.subtitle}
-                      </span>
-                    </div>
-                    
-                    <p className="text-muted-foreground leading-relaxed text-[15px]">
-                      {venture.description}
-                    </p>
-                  </div>
-                </Card>
-              </a>
-            ))}
-          </div>
+                    </Card>
+                  </a>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </div>
     </section>
