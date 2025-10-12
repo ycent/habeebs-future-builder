@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import eventnavLogo from "@/assets/eventnav-logo.png";
-import eventnavLogo1 from "@/assets/eventnav-logo-1.png";
+import eventnavLogo1 from "@/assets/eventnav.png";
 import eventnavLogo2 from "@/assets/eventnav-logo-2.png";
 import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
 import h3Logo from "@/assets/h3-logo.png";
