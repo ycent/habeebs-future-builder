@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import eventnavLogo from "@/assets/eventnav-logo.png";
+import eventnavLogo2 from "@/assets/eventnav-logo-2.png";
 import gdgBabcockLogo from "@/assets/gdg-babcock-logo.png";
 import h3Logo from "@/assets/h3-logo.png";
 import techhubLogo from "@/assets/techhub-logo.png";
@@ -20,7 +21,7 @@ const ventures = [
     subtitle: "SaaS Company",
     description: "A software company building digital platforms for events, culture, and communities.",
     link: "https://eventnavltd.com",
-    logo: eventnavLogo,
+    logo: eventnavLogo2,
   },
   {
     title: "Babcock New Horizon Techub",
